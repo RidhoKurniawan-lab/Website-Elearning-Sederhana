@@ -101,11 +101,22 @@ Pastikan Anda telah menginstal beberapa sistem inti berikut:
 
 ## 📸 Tampilan Antarmuka (Screenshots)
 
-*(Agar tampilan GitHub Anda semakin menarik, jangan lupa mengunggah screenshot dari aplikasi lalu tempatkan tautan gambarnya pada bagian ini)*
+Berikut adalah beberapa pratinjau antarmuka dari sistem E-Learning ini:
 
-- **Halaman Login Otentikasi** <!-- Ganti dengan ![Login](/path-ke-gambar.png) -->
-- **Halaman Dashboard Area** <!-- Ganti dengan ![Dashboard](/path-ke-gambar.png) -->
-- **Halaman Manajemen Data Master Mahasiswa** <!-- Ganti dengan ![Master](/path-ke-gambar.png) -->
+### 1. Halaman Login Otentikasi
+![Halaman Login](resources/img/login.png)
+
+### 2. Halaman Dashboard
+![Halaman Dashboard](resources/img/dashboard.png)
+
+### 3. Halaman Master Data Mahasiswa
+![Data Mahasiswa](resources/img/master%20mahasiswa.png)
+
+### 4. Form Tambah Data Mahasiswa
+![Tambah Mahasiswa](resources/img/add%20mahasiswa.png)
+
+### 5. Form Edit Data Mahasiswa
+![Edit Mahasiswa](resources/img/edit%20mahasiswa.png)
 
 ## 🧑‍💻 Penulis
 
