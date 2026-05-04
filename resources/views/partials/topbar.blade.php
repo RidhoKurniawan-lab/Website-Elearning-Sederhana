@@ -32,7 +32,7 @@
                 <!-- Profile Dropdown (simulasi) -->
                 <div class="flex items-center gap-2 cursor-pointer md:gap-3 group">
                     <div class="hidden text-right sm:block">
-                        <p class="text-sm font-semibold text-gray-800">{{ auth()->user()->name; }}</p>
+                        <p class="text-sm font-semibold text-gray-800">{{ auth()->user()->name }}</p>
                         <p class="text-xs text-gray-500">Super Admin</p>
                     </div>
                     <div

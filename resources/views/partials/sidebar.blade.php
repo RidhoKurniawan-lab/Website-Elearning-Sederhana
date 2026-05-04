@@ -1,5 +1,5 @@
 <aside id="sidebar"
-    class="fixed inset-y-0 left-0 z-30 flex flex-col overflow-y-auto transform -translate-x-full bg-white shadow-2xl sidebar-transition lg:relative w-72 lg:shadow-md sidebar-scroll lg:translate-x-0">
+    class="fixed inset-y-0 left-0 z-30 flex flex-col overflow-y-auto transform  bg-white shadow-2xl sidebar-transition lg:relative w-72 lg:shadow-md sidebar-scroll lg:translate-x-0">
 
     <!-- Header Sidebar dengan logo -->
     <div class="sticky top-0 z-10 px-6 pt-6 pb-4 bg-white border-b border-gray-100">

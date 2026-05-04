@@ -201,7 +201,7 @@
             </div>
         </div>
     </div>
-    @include('components.sweetalert')
+    @include('components.SweetAlert')
 </body>
 
 </html>

@@ -50,7 +50,7 @@
 
     </div>
     </div>
-    @include('components.sweetalert')
+    @include('components.SweetAlert');
 
     <script>
         // Mobile sidebar toggle - sandwich button terintegrasi di navbar
