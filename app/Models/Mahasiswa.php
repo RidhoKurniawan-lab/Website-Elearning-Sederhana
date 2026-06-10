@@ -17,13 +17,26 @@ class Mahasiswa extends Model
         return $this->belongsTo(Jurusan::class);
     }
 
+    /**
+     * @param  string  $search
+     */
+    public function scopeGetLastestPaginated($query, $search)
+    {
+        return $query->with('jurusan')
+            ->filter($search)
+            ->latest()
+            ->paginate(10)
+            ->withQueryString();
+    }
+
     protected static function booted()
     {
         static::creating(function ($mahasiswa) {
             $tahun = date('y');
             do {
-                $nim = $tahun . mt_rand(1000000000, 9999999999);
-            } while (static::where('nim', $nim)->exists());
+                $nim = $tahun.random_int(1000000000, 9999999999);
+
+            } while (static::query()->where('nim', $nim)->exists());
 
             $mahasiswa->nim = $nim;
         });
@@ -36,7 +49,7 @@ class Mahasiswa extends Model
                 return $query->where('nim', $search);
             }
 
-            return $query->where('nama', 'LIKE', '%'. $search . '%');
+            return $query->where('nama', 'LIKE', '%'.$search.'%');
         }
 
         return $query;

@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\MahasiswaExport;
 use App\Models\Jurusan;
 use App\Models\Mahasiswa;
+use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Http\Request;
+use Maatwebsite\Excel\Facades\Excel;
 
 class MahasiswaController extends Controller
 {
@@ -93,5 +96,23 @@ class MahasiswaController extends Controller
         $mahasiswa->delete();
 
         return redirect()->route('mahasiswa.index')->with('success', 'Data mahasiswa berhasil dihapus!');
+    }
+
+    public function exportExcel(){
+        return Excel::download(new MahasiswaExport, 'mahasiswa.xlsx');
+    }
+
+    public function exportPdf(){
+        $mahasiswa = Mahasiswa::with('jurusan')->get();
+
+        $data = [
+            'title' => 'Laporan Data Mahasiswa',
+            'date' => date('d M Y'),
+            'mahasiswa' => $mahasiswa,
+        ];
+
+        $pdf = Pdf::loadView('mahasiswas.pdf', $data);
+
+        return $pdf->download('laporan-mahasiswa.pdf');
     }
 }

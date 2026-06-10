@@ -10,6 +10,16 @@
                 <p class="text-xs md:text-sm text-gray-500 mt-0.5">Menampilkan semua mahasiswa yang tersedia di Database</p>
             </div>
             <div class="flex gap-2">
+                <a href="{{ route('mahasiswa.export.pdf') }}"
+                    class="px-2.5 md:px-3 py-1.5 text-xs md:text-sm bg-red-600 text-white rounded-lg hover:bg-red-700 transition flex items-center gap-1 md:gap-2 shadow-sm cursor-pointer">
+                    <i class="text-xs fas fa-file-pdf"></i>
+                    <span class="hidden sm:inline">Pdf</span>
+                </a>
+                <a href="{{ route('mahasiswa.export.xlsx') }}"
+                    class="px-2.5 md:px-3 py-1.5 text-xs md:text-sm bg-green-600 text-white rounded-lg hover:bg-green-700 transition flex items-center gap-1 md:gap-2 shadow-sm cursor-pointer">
+                    <i class="text-xs fas fa-file-excel"></i>
+                    <span class="hidden sm:inline">Excel</span>
+                </a>
                 <a href="{{ route('mahasiswa.create') }}"
                     class="px-2.5 md:px-3 py-1.5 text-xs md:text-sm bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition flex items-center gap-1 md:gap-2 shadow-sm cursor-pointer">
                     <i class="text-xs fas fa-plus"></i>

@@ -26,4 +26,9 @@ Route::middleware(['auth'])->group(function () {
     //Route Jurusan
     Route::resource('jurusan', JurusanController::class);
 
+    Route::get('/export-excel-mahasiswa', [MahasiswaController::class, 'exportExcel'])->name('mahasiswa.export.xlsx');
+
+    Route::get('/export-pdf-mahasiswa', [MahasiswaController::class, 'exportPdf'])->name('mahasiswa.export.pdf');
+
+
 });
